@@ -1,15 +1,13 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-buttons slot="start">
-    <ion-menu-button></ion-menu-button>
     <ion-title>Login</ion-title>
-    </ion-buttons>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
   <ion-card>
-    <ion-header>
+    <ion-header style="height: 7em; width: 7em;  display: flex; margin: auto;" >
+      <img class="logo" src="https://pbs.twimg.com/media/FeasF4ZXEAAuTnb?format=png&name=small" alt="LogoQl">
     </ion-header>
     <ion-card-content>
       <ion-item>
@@ -20,12 +18,18 @@
         <ion-label position="floating">Constraseña</ion-label>
         <ion-input type="password"></ion-input>
       </ion-item>
-      <ion-item>
-        <ion-label position="floating">Confirmar contraseña</ion-label>
-        <ion-input type="password"></ion-input>
+      <ion-item id="check">
+        <ion-checkbox slot="start"></ion-checkbox>
+        <ion-label style="size: 5px;">Recuerdame</ion-label>
       </ion-item>
       <br>
-      <ion-button>Iniciar sesion</ion-button>
+      <ion-button href="/home" class="ini" style="padding-bottom: 5px;">Iniciar sesion</ion-button>
+      <br>
+      <div>
+        <ion-text color="tertiary">
+          <p>No tienes cuenta?.. <i><a href="" target="_self">Registrate</a></i></p>
+        </ion-text>
+      </div>
   </ion-card-content>
   </ion-card>
 </ion-content>
