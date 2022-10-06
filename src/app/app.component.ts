@@ -13,7 +13,7 @@ export class AppComponent {
     { title: 'Favoritos', url: '/folder/Favorites', icon: 'heart' },
     { title: 'Archivado', url: '/folder/Archived', icon: 'archive' },
     { title: 'Papelera', url: '/folder/Trash', icon: 'trash' },
-    { title: 'Spam', url: '/folder/Spam', icon: 'warning' },
+    { title: 'Cerrar sesión', url: '/login', icon: 'warning' }
   ];
 
 }
