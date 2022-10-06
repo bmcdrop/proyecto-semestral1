@@ -3,10 +3,22 @@
     <ion-buttons slot="start">
       <ion-menu-button></ion-menu-button>
     </ion-buttons>
-    <ion-title>About</ion-title>
+    <ion-title>{{pageTitle | titlecase}}</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
+    <ion-list lines="full" *ngIf="listaIngenieros">
+    <ion-item *ngFor="let ingeniero of listaIngenieros">
+      <ion-avatar slot="start">
+        <img [src]="ingeniero.foto" alt="{{ingeniero.name}}">
+      </ion-avatar>
+      <ion-label>
+        <h2>{{ingeniero.name}}</h2>
+        <h3>{{ingeniero.homeworld | titlecase}}</h3>
+      </ion-label>
+      <ion-icon class="ff" name="arrow-forward" (click)="goToDetail(ingeniero)"></ion-icon>
+    </ion-item>    
+  </ion-list>
 
 </ion-content>
