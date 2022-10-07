@@ -1,0 +1,25 @@
+<ion-header>
+  <ion-toolbar>
+    
+    <ion-buttons slot="start">
+     <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>{{pageTitle}}</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card>
+    <img [src]="ingeniero.foto" alt="{{ingeniero.name}}">
+    <ion-card-header>
+      <ion-card-subtitle>{{ingeniero.homeworld | titlecase }}</ion-card-subtitle>
+      <ion-card-title>{{ingeniero.name}}</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <p>{{ingeniero.descripcion}}</p>
+      <ion-text color="tertiary">
+        <p>Pinche para <i><a href="{{ingeniero.instagram}}" target="_self">Contactar</a></i></p>
+      </ion-text>
+    </ion-card-content>
+  </ion-card>
+</ion-content>
