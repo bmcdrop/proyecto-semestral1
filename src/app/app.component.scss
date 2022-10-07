@@ -1,4 +1,5 @@
 ion-menu ion-content {
+  --padding-top: 20px;
   --background: var(--ion-item-background, var(--ion-background-color, #fff));
 }
 
@@ -21,6 +22,8 @@ ion-menu.md ion-list {
 ion-menu.md ion-note {
   margin-bottom: 30px;
 }
+
+
 
 ion-menu.md ion-list-header,
 ion-menu.md ion-note {
