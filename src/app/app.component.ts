@@ -10,7 +10,7 @@ export class AppComponent {
     { title: 'Socios', url:'/about',icon:'People'},
     { title: 'Bandeja de entrada', url: '/folder/Inbox', icon: 'mail' },
     { title: 'Bandeja de salida', url: '/folder/Outbox', icon: 'paper-plane' },
-    { title: 'Spam', url: '/folder/Spam', icon: 'warning' },
+    { title: 'Cerrar sesión', url: '/login', icon: 'warning' }
   ];
 
 }
