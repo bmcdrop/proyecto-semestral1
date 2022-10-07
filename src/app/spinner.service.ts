@@ -7,9 +7,9 @@ import { Subject } from "rxjs";
 export class spinnerService{
 isLoading$ = new Subject<boolean>();
     show():void{
-        this.isLoading$.next(true)
+        this.isLoading$.next(true);
     }
     hide():void{
-        this.isLoading$.next(false)
+        this.isLoading$.next(false);
     }
 }

@@ -13,9 +13,11 @@ import { spinnerModule } from './spinner/spinner.module';
 
 @NgModule({
   declarations: [AppComponent],
-  imports: [BrowserModule, IonicModule.forRoot(),spinnerModule, AppRoutingModule,HttpClientModule],
-  providers: [{ provide: RouteReuseStrategy, useClass: IonicRouteStrategy },
-              {provide: HTTP_INTERCEPTORS,useClass:SpinnerInterceptor, multi:true}],
+  imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule,HttpClientModule,spinnerModule],
+  providers: [
+              { provide: RouteReuseStrategy, useClass: IonicRouteStrategy },
+              {provide: HTTP_INTERCEPTORS,useClass:SpinnerInterceptor, multi:true}
+            ],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
