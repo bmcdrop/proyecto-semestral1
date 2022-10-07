@@ -7,12 +7,9 @@ import { Component } from '@angular/core';
 export class AppComponent {
   public appPages = [
     { title: 'Bienvenida', url:'/home',icon:'home'},
-    { title: 'Sobre', url:'/about',icon:'People'},
+    { title: 'Socios', url:'/about',icon:'People'},
     { title: 'Bandeja de entrada', url: '/folder/Inbox', icon: 'mail' },
     { title: 'Bandeja de salida', url: '/folder/Outbox', icon: 'paper-plane' },
-    { title: 'Favoritos', url: '/folder/Favorites', icon: 'heart' },
-    { title: 'Archivado', url: '/folder/Archived', icon: 'archive' },
-    { title: 'Papelera', url: '/folder/Trash', icon: 'trash' },
     { title: 'Spam', url: '/folder/Spam', icon: 'warning' },
   ];
 
