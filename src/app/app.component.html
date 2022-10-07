@@ -1,4 +1,6 @@
-<ion-app>
+<app-spinner></app-spinner>
+
+<ion-app>  
   <ion-split-pane contentId="main-content">
     <ion-menu contentId="main-content" type="overlay">
       <ion-content>
@@ -15,7 +17,6 @@
         </ion-list>
 
         <ion-list id="labels-list">
-          <ion-list-header>2022</ion-list-header>
 
           <ion-item *ngFor="let label of labels" lines="none">
             <ion-icon slot="start" ios="bookmark-outline" md="bookmark-sharp"></ion-icon>
