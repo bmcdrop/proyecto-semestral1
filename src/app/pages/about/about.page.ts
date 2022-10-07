@@ -24,6 +24,22 @@ export class AboutPage implements OnInit {
       name:'Matias Saldivia',
       homeworld:'Jefe de proyectos',
       foto:'https://pbs.twimg.com/media/FeVm4HjXgAA3MMb?format=jpg&name=large',
+      descripcion:'Desarrollador full Stack, especialista en desarrollo de paginas web, gestión agil de proyectos.',
+      instagram:'https://www.instagram.com/mob._ss/?hl=es-la',
+    },
+    {
+      id:3,
+      name:'Tony Stark',
+      homeworld:'Diseñador grafico',
+      foto:'https://assets.puzzlefactory.pl/puzzle/387/881/original.webp',
+      descripcion:'Desarrollador full Stack, especialista en desarrollo de paginas web, gestión agil de proyectos.',
+      instagram:'https://www.instagram.com/mob._ss/?hl=es-la',
+    },
+    {
+      id:4,
+      name:'Natasha Romanoff',
+      homeworld:'Programadora',
+      foto:'https://upload.wikimedia.org/wikipedia/en/thumb/f/f6/Scarlett_Johansson_as_Black_Widow.jpg/220px-Scarlett_Johansson_as_Black_Widow.jpg',
       descripcion:'Desarrollador full Stack, especialista en desarrollo de paginas web, gestión agil de proyectos y prostituto.',
       instagram:'https://www.instagram.com/mob._ss/?hl=es-la',
     }
