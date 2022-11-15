@@ -11,6 +11,7 @@ export class AppComponent {
     { title: 'Bandeja de entrada', url: '/folder/Inbox', icon: 'mail' },
     { title: 'Bandeja de salida', url: '/folder/Outbox', icon: 'paper-plane' },
     { title: 'Log-out', url:'/login', icon: 'log-out'},
+    { title: 'Loading', url:'/loading', icon: 'refresh-circle'},
   ];
 
 }
