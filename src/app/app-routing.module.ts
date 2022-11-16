@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
-import { CustomPreloadStrategy } from './custom-preload';
+
 
 const routes: Routes = [
   {
@@ -27,20 +27,20 @@ const routes: Routes = [
   {
     path: 'login',
     loadChildren: () => import('./pages/login/login.module').then( m => m.LoginPageModule)
-  },  {
-    path: 'loading',
-    loadChildren: () => import('./pages/loading/loading.module').then( m => m.LoadingPageModule)
-  }
-
+  },
+  {
+    path: 'registrarse',
+    loadChildren: () => import('./pages/registrarse/registrarse.module').then( m => m.RegistrarsePageModule)
+  },
 
 ];
 
 @NgModule({
   imports: [
-    RouterModule.forRoot(routes, { preloadingStrategy: CustomPreloadStrategy })
+    RouterModule.forRoot(routes, {  })
   ],
   providers:[
-    CustomPreloadStrategy
+    
   ],
   exports: [RouterModule]
 })

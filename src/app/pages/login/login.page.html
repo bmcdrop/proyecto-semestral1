@@ -23,11 +23,11 @@
         <ion-label style="size: 5px;">Recuerdame</ion-label>
       </ion-item>
       <br>
-      <ion-button href="/home" class="ini" style="padding-bottom: 5px;">Iniciar sesion</ion-button>
+      <ion-button href="/home" class="ini" style="padding-bottom: 5px;" (click)="showLoading()" >Iniciar sesion</ion-button>
       <br>
       <div>
         <ion-text color="tertiary">
-          <p>No tienes cuenta?.. <i><a href="" target="_self">Registrate</a></i></p>
+          <p>No tienes cuenta?.. <i><a href="/registrarse" target="_self">Registrate</a></i></p>
         </ion-text>
       </div>
   </ion-card-content>
