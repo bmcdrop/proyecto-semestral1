@@ -6,59 +6,58 @@
 </ion-header>
 
 <ion-content>
-<ion-list>
-  <ion-item>
-    <ion-label position="floating">Nombre</ion-label>
-    <ion-input></ion-input>
-  </ion-item>
 
-  <ion-item>
-    <ion-label position="floating">Rut</ion-label>
-    <ion-input></ion-input>
-  </ion-item>
+  <form (ngSubmit)="register()" [formGroup]="credentials">
 
-  <ion-item>
-    <ion-label position="floating">Apellido Paterno</ion-label>
-    <ion-input></ion-input>
-  </ion-item>
+    <ion-item>
+      <ion-input type="nombre" placeholder="Nombre..." formControlName="Nombre"></ion-input>
+      <ion-note slot="error" *ngIf="(nombre?.dirty|| nombre?.touched)&& nombre?.errors">Porfavor ingrese su nombre</ion-note>
+    </ion-item>
 
-  <ion-item>
-    <ion-label position="floating">Apellido Materno</ion-label>
-    <ion-input></ion-input>
-  </ion-item>
+    <ion-item>
+      <ion-input type="apellidoPaterno" placeholder="Apellido Paterno..." formControlName="apellidoPaterno"></ion-input>
+      <ion-note slot="error" *ngIf="(apellidoPaterno?.dirty|| apellidoPaterno?.touched)&& apellidoPaterno?.errors">Porfavor ingrese su apellido paterno</ion-note>
+    </ion-item>
 
-  <ion-item>
-    <ion-label position="floating">Correo</ion-label>
-    <ion-input></ion-input>
-  </ion-item>
+    <ion-item>
+      <ion-input type="apellidoMaterno" placeholder="Apellido Materno..." formControlName="apellidoMaterno"></ion-input>
+      <ion-note slot="error" *ngIf="(apellidoMaterno?.dirty|| apellidoMaterno?.touched)&& apellidoMaterno?.errors">Porfavor ingrese su apellido materno</ion-note>
+    </ion-item>
 
-  <ion-item>
-    <ion-label position="floating">Constraseña</ion-label>
-    <ion-input></ion-input>
-  </ion-item>
+    <ion-item>
+      <ion-input type="rut" placeholder="Rut..." formControlName="rut"></ion-input>
+      <ion-note slot="error" *ngIf="(rut?.dirty|| rut?.touched)&& rut?.errors">Porfavor ingrese su rut</ion-note>
+    </ion-item>
 
-  <ion-item>
-    <ion-label position="floating">Direccion</ion-label>
-    <ion-input></ion-input>
-  </ion-item>
+    <ion-item>
+      <ion-input type="email" placeholder="Email..." formControlName="email"></ion-input>
+      <ion-note slot="error" *ngIf="(email?.dirty|| email?.touched)&& email?.errors">Formato email no va</ion-note>
+    </ion-item>
 
-  <ion-item>
-    <ion-label position="floating">Fecha de Nacimiento</ion-label>
-    <ion-input></ion-input>
-  </ion-item>
+    <ion-item>
+      <ion-input type="password" placeholder="Password..." formControlName="password"></ion-input>
+      <ion-note slot="error" *ngIf="(password?.dirty|| password?.touched)&& password?.errors">La contraseña debe contener al menos 6 caracteres</ion-note>
+    </ion-item>
 
-  <ion-item>
-    <ion-label position="floating">Telefono</ion-label>
-    <ion-input></ion-input>
-  </ion-item>
+    <ion-item>
+      <ion-input type="telefono" placeholder="Telefono..." formControlName="telefono"></ion-input>
+      <ion-note slot="error" *ngIf="(telefono?.dirty|| telefono?.touched)&& telefono?.errors">La contraseña debe contener al menos 8 numeros</ion-note>
+    </ion-item>
 
-  <ion-item>
-    <ion-label position="floating">Foto</ion-label>
-    <ion-input></ion-input>
-  </ion-item>
-</ion-list>
+    <ion-item>
+      <ion-input type="fechaNacimiento" placeholder="DD/MM/AAAA" formControlName="fechaNacimiento"></ion-input>
+      <ion-note slot="error" *ngIf="(fechaNacimiento?.dirty|| fechaNacimiento?.touched)&& fechaNacimiento?.errors">Ingrese una fehca correcta</ion-note>
+    </ion-item>
 
-  <ion-button expand="block">Enviar</ion-button>
+    <ion-item>
+      <ion-input type="direccion" placeholder="direccion..." formControlName="direccion"></ion-input>
+      <ion-note slot="error" *ngIf="(direccion?.dirty|| direccion?.touched)&& direccion?.errors">Ingrese su direccion</ion-note>
+    </ion-item>
+    
+    <ion-button expand="full" type="submit" [disabled]="!credentials.valid">Login</ion-button>
+    <ion-button expand="full" type="button" (click)="register()" href="/registrarse">Crear cuenta</ion-button>
+
+  </form>
 
 
 </ion-content>
