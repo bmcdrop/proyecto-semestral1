@@ -42,7 +42,6 @@ export class LoginPage implements OnInit {
     })
   }
 
-  login(){}
 
 
   async showLoading() {
@@ -69,7 +68,21 @@ export class LoginPage implements OnInit {
     this.alertPresent('Registro fallido','revise bien los datos ingresados e intentelo nuevamente');
   }
 
-async alertPresent(header:string,message:string){
+async login(){
+  const loading = await this.loadingCtrl.create();
+  await loading.present();
+  const user = await this.authService.login(this.credentials.value.email,this.credentials.value.password);
+  
+  if(user){
+    this.router.navigateByUrl('/home');
+  }
+  else{
+    this.alertPresent('Ingreso fallido','Revise bien los datos ingresados e intentelo denuevo...');
+  }
+
+
+}
+  async alertPresent(header:string,message:string){
   const alert = await this.alertCtrl.create({
     header:header,
     message:message,
