@@ -9,6 +9,32 @@ const routes: Routes = [
     pathMatch: 'full'
   },
   {
+    path: 'login',
+    redirectTo: 'login',
+    pathMatch: 'full'
+  },
+  {
+    path: 'home',
+    redirectTo: 'home',
+    pathMatch: 'full'
+  },
+  {
+    path: 'about',
+    redirectTo: 'about',
+    pathMatch: 'full'
+  },
+  {
+    path: 'detalle-ingeniero',
+    redirectTo: 'detalle-ingeniero',
+    pathMatch: 'full'
+  },
+  {
+    path: '**',
+    redirectTo: 'e404',
+    pathMatch: 'full'
+  },
+
+  {
     path: 'folder/:id',
     loadChildren: () => import('./pages/folder/folder.module').then( m => m.FolderPageModule)
   },
@@ -28,6 +54,11 @@ const routes: Routes = [
     path: 'login',
     loadChildren: () => import('./pages/login/login.module').then( m => m.LoginPageModule)
   },
+  {
+    path: 'e404',
+    loadChildren: () => import('./pages/e404/e404.module').then( m => m.E404PageModule)
+  },
+
 
 
 ];
