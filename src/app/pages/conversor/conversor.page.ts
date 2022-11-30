@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ConversorService } from 'src/app/services/conversor.service';
 
 @Component({
   selector: 'app-conversor',
@@ -6,8 +7,15 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./conversor.page.scss'],
 })
 export class ConversorPage implements OnInit {
+getdata:any[]=[];
+  constructor(public _services: ConversorService) {
 
-  constructor() { }
+    this._services.getdata<any[]>("").subscribe(data =>{
+      this.getdata=data
+      console.log(this.getdata);
+    })
+
+   }
 
   ngOnInit() {
   }

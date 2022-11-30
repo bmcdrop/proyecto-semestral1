@@ -8,7 +8,7 @@ export class AppComponent {
   public appPages = [
     { title: 'Bienvenida', url:'/home',icon:'home'},
     { title: 'Socios', url:'/about',icon:'People'},
-    { title: 'Bandeja de entrada', url: '/folder/Inbox', icon: 'mail' },
+    { title: 'Conversor', url: '/conversor', icon: 'cash' },
     { title: 'Bandeja de salida', url: '/folder/Outbox', icon: 'paper-plane' },
     { title: 'Log-out', url:'/login', icon: 'log-out'},
     { title: 'Loading', url:'/loading', icon: 'refresh-circle'},

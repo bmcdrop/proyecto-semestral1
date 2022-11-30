@@ -29,6 +29,11 @@ const routes: Routes = [
     pathMatch: 'full'
   },
   {
+    path: 'conversor',
+    redirectTo: 'conversor',
+    pathMatch: 'full'
+  },
+  {
     path: '**',
     redirectTo: 'e404',
     pathMatch: 'full'
@@ -57,10 +62,8 @@ const routes: Routes = [
   {
     path: 'e404',
     loadChildren: () => import('./pages/e404/e404.module').then( m => m.E404PageModule)
-  },  {
-    path: 'clima',
-    loadChildren: () => import('./pages/clima/clima.module').then( m => m.ClimaPageModule)
   },
+
   {
     path: 'conversor',
     loadChildren: () => import('./pages/conversor/conversor.module').then( m => m.ConversorPageModule)
