@@ -34,6 +34,11 @@ const routes: Routes = [
     pathMatch: 'full'
   },
   {
+    path: 'formulario-registro',
+    redirectTo: 'formulario-registro',
+    pathMatch: 'full'
+  },
+  {
     path: '**',
     redirectTo: 'e404',
     pathMatch: 'full'
@@ -68,6 +73,14 @@ const routes: Routes = [
     path: 'conversor',
     loadChildren: () => import('./pages/conversor/conversor.module').then( m => m.ConversorPageModule)
   },
+  {
+    path: 'formulario-registro',
+    loadChildren: () => import('./pages/formulario-registro/formulario-registro.module').then( m => m.FormularioRegistroPageModule)
+  },  {
+    path: 'modal',
+    loadChildren: () => import('./pages/modal/modal.module').then( m => m.ModalPageModule)
+  },
+
 
 
 

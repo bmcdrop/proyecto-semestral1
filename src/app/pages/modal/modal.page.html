@@ -1,0 +1,36 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>modal</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+<div *ngIf="conductor">
+  <ion-item>
+    <ion-label position="floating">username</ion-label>
+    <ion-input type="text" [(ngModel)]="conductor.username" required></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label position="floating">email</ion-label>
+    <ion-input type="text" [(ngModel)]="conductor.email" required></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label position="floating">password</ion-label>
+    <ion-input type="text" [(ngModel)]="conductor.password" required></ion-input>
+  </ion-item>
+  
+</div>
+<ion-button expand="block" color="success" (click)="updateConductor()">
+  <ion-icon name="save" slot="start">UPDATE</ion-icon>
+</ion-button>
+<ion-button expand="block" color="danger" (click)="deleteConductor()">
+  <ion-icon name="trash" slot="start">DELETE</ion-icon>
+</ion-button>
+
+
+
+
+
+
+
+</ion-content>

@@ -9,7 +9,7 @@ export class AppComponent {
     { title: 'Bienvenida', url:'/home',icon:'home'},
     { title: 'Socios', url:'/about',icon:'People'},
     { title: 'Conversor', url: '/conversor', icon: 'cash' },
-    { title: 'Bandeja de salida', url: '/folder/Outbox', icon: 'paper-plane' },
+    { title: 'Registro Conductores', url: '/formulario-registro', icon: 'car' },
     { title: 'Log-out', url:'/login', icon: 'log-out'},
     { title: 'Loading', url:'/loading', icon: 'refresh-circle'},
 
