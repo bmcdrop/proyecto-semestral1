@@ -8,7 +8,6 @@
 
   </ion-toolbar>
 </ion-header>
-
 <ion-content>
   <div>
     <h1 id="titulo">Conversor de moneda!</h1>
@@ -19,9 +18,9 @@
   </div>
   <p id="tipo_conversor">De dolar a peso chileno:</p>
   <div class="input-group">
-    <input name="USD" id="remitosucursal" type="number" required class="form-control" placeholder="USD">
+    <input name="USD" id="USD1" type="number" required class="form-control" placeholder="USD" onchange=sumar()>
     <span class="input-group-addon">-></span>
-    <input name="CLP" id="remitonumero" type="text" required class="form-control" placeholder="CLP" disabled>
+    <input name="CLP" id="CLP1" type="text" required class="form-control" placeholder="CLP" disabled onchange=sumar()>
   </div>
   <button id="convertir">Convertir</button>
   <br>
@@ -36,13 +35,6 @@
   <br>
   <br>
   <br>
-  
-  
-
-
-
-
-
 </ion-content>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>

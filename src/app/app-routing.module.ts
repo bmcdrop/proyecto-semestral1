@@ -34,8 +34,8 @@ const routes: Routes = [
     pathMatch: 'full'
   },
   {
-    path: 'sobreNosotros',
-    redirectTo: 'sobreNosotros',
+    path: 'sobre-nosotros',
+    redirectTo: 'sobre-nosotros',
     pathMatch: 'full'
   },
 
