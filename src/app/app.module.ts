@@ -17,6 +17,8 @@ import { provideFirebaseApp} from '@angular/fire/app';
 import { provideFirestore, getFirestore} from '@angular/fire/firestore';
 import { provideStorage, getStorage } from '@angular/fire/storage';
 import { getApp } from 'firebase/app';
+import { WheaterApiComponent } from './components/wheater-api/wheater-api.component';
+
 
 
 @NgModule({

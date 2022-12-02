@@ -1,19 +1,19 @@
 import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
 import { IonicModule } from '@ionic/angular';
 
-import { FormularioRegistroPage } from './formulario-registro.page';
+import { WheaterApiComponent } from './wheater-api.component';
 
-describe('FormularioRegistroPage', () => {
-  let component: FormularioRegistroPage;
-  let fixture: ComponentFixture<FormularioRegistroPage>;
+describe('WheaterApiComponent', () => {
+  let component: WheaterApiComponent;
+  let fixture: ComponentFixture<WheaterApiComponent>;
 
   beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
-      declarations: [ FormularioRegistroPage ],
+      declarations: [ WheaterApiComponent ],
       imports: [IonicModule.forRoot()]
     }).compileComponents();
 
-    fixture = TestBed.createComponent(FormularioRegistroPage);
+    fixture = TestBed.createComponent(WheaterApiComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   }));
