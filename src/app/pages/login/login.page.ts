@@ -55,7 +55,7 @@ export class LoginPage implements OnInit {
 
   async register(){
     const loading = await this.loadingCtrl.create();
-    await loading.present();
+    
     const user = await this.authService.register(this.credentials.value.email,this.credentials.value.password)
     await loading.dismiss();
 
@@ -70,7 +70,7 @@ export class LoginPage implements OnInit {
 
 async login(){
   const loading = await this.loadingCtrl.create();
-  //await loading.present();
+  
   const user = await this.authService.login(this.credentials.value.email,this.credentials.value.password);
   
   if(user){

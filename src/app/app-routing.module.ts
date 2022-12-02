@@ -34,10 +34,11 @@ const routes: Routes = [
     pathMatch: 'full'
   },
   {
-    path: 'formulario-registro',
-    redirectTo: 'formulario-registro',
+    path: 'sobreNosotros',
+    redirectTo: 'sobreNosotros',
     pathMatch: 'full'
   },
+
   {
     path: '**',
     redirectTo: 'e404',
@@ -74,9 +75,10 @@ const routes: Routes = [
     loadChildren: () => import('./pages/conversor/conversor.module').then( m => m.ConversorPageModule)
   },
   {
-    path: 'modal',
-    loadChildren: () => import('./pages/modal/modal.module').then( m => m.ModalPageModule)
+    path: 'sobre-nosotros',
+    loadChildren: () => import('./pages/sobre-nosotros/sobre-nosotros.module').then( m => m.SobreNosotrosPageModule)
   },
+
 
 
 
