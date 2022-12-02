@@ -8,15 +8,39 @@ ion-card{
     justify-content: center;
     align-items: center;
 }
+
+#btoLogin{
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    margin-top: 40%;
+    width: 60%;
+    margin: 0 auto;
+    margin-top: 30%;
+
+}
+
+#btoCreateAccount{
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    margin-top: 40%;
+    width: 60%;
+    margin: 0 auto;
+    margin-top: 3%;
+
+}
+
 .logo{
     position: relative;
-    margin-left: 30%;
-    border-radius: 5px;
-    height: 7em;
-    width: 7em;
+    margin-left: 42.5%;
+    margin-block-end: 10.5%;
+    border-radius: 10px;
+    height: 3em;
+    width: 3em;
     align-items: center;
     text-align: center;
 }
 form{
-    margin-top: 5rem;
+    margin-top: 4rem;
 }

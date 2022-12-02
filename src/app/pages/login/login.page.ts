@@ -47,7 +47,7 @@ export class LoginPage implements OnInit {
   async showLoading() {
     const loading = await this.loadingCtrl.create({
       message: 'Cargando TeLlevoApp...',
-      duration: 3000,
+      duration: 1500,
     });
 
     loading.present();
