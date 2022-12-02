@@ -1,11 +1,10 @@
-<app-spinner></app-spinner>
-
 <ion-app>  
   <ion-split-pane contentId="main-content">
     <ion-menu contentId="main-content" type="overlay">
       <ion-content>
         <ion-list id="inbox-list">
-          <ion-list-header>TeLlevoAPP</ion-list-header>
+          <img class="logo" src="../../../assets/img/Logo feo.png" alt="Logo">
+          <ion-list-header id="Title">TeLlevoApp</ion-list-header>
           <ion-note class="info">¡Navega entre las distintas funciones!</ion-note>
 
           <ion-menu-toggle auto-hide="false" *ngFor="let p of appPages; let i = index">

@@ -1,20 +1,49 @@
-<ion-header>
+<ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-title>conversor</ion-title>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+
+    <ion-title></ion-title>
+
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
-  <ion-img src="assets/img/transfer.svg" class="img"></ion-img>
+  <div>
+    <h1 id="titulo">Conversor de moneda!</h1>
+    <h3 id="subtitulo">Transforma tu moneda de dolar a pesos chilenos!</h3>
+    <div id="explicacion">
+      <p id="expliacion-texto">Esta funcion esta creada para ayudar a la gente que se maneja mas con dolares atraves de aplicaciones como paypal</p>
+    </div>
+  </div>
+  <p id="tipo_conversor">De dolar a peso chileno:</p>
+  <div class="input-group">
+    <input name="USD" id="remitosucursal" type="number" required class="form-control" placeholder="USD">
+    <span class="input-group-addon">-></span>
+    <input name="CLP" id="remitonumero" type="text" required class="form-control" placeholder="CLP" disabled>
+  </div>
+  <button id="convertir">Convertir</button>
+  <br>
+  <br>
+  <p id="tipo_conversor">De peso chileno a dolar:</p>
+  <div class="input-group">
+    <input name="USD" id="remitosucursal" type="number" required class="form-control" placeholder="CLP">
+    <span class="input-group-addon">-></span>
+    <input name="CLP" id="remitonumero" type="text" required class="form-control" placeholder="USD" disabled>
+  </div>
+  <button id="convertir">Convertir</button>
+  <br>
+  <br>
+  <br>
+  
+  
 
-<ion-list>
-  <ion-item *ngFor="let name of getdata">
-    {{name.dolar}}
-    {{name.uf}}
-    {{name.ipc}}
-  </ion-item>
-</ion-list>
+
 
 
 
 </ion-content>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">

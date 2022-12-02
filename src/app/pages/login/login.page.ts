@@ -47,7 +47,7 @@ export class LoginPage implements OnInit {
   async showLoading() {
     const loading = await this.loadingCtrl.create({
       message: 'Cargando TeLlevoApp...',
-      duration: 3000,
+      duration: 1500,
     });
 
     loading.present();
@@ -70,7 +70,7 @@ export class LoginPage implements OnInit {
 
 async login(){
   const loading = await this.loadingCtrl.create();
-  await loading.present();
+  //await loading.present();
   const user = await this.authService.login(this.credentials.value.email,this.credentials.value.password);
   
   if(user){
