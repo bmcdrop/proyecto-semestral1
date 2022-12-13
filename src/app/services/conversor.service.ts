@@ -18,4 +18,7 @@ getdata<T>(url: string){
   return this._http.get<T[]>(url);
 }
 
+
+
+
 }

@@ -19,5 +19,6 @@ getdata:any[]=[];
 
   ngOnInit() {
   }
+  
 
 }
