@@ -1,0 +1,26 @@
+ion-item {
+    --padding-start: 0;
+  }
+  
+  /* iOS places the subtitle above the title */
+  ion-card-header.ios {
+    display: flex;
+    flex-flow: column-reverse;
+  }
+
+  ion-card-title{
+    font-size: small;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+  }
+
+  ion-card-subtitle{
+    font-size: x-large;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: bold;
+    
+  }
+
+  #Preguntas{
+    margin: 15px;
+  }

@@ -17,6 +17,19 @@ ion-menu.md ion-content {
   margin-top: 1rem;
 }
 
+.logo{
+  height: 2em;
+  display: inline;
+  position: absolute;
+  left: 70%;
+  top: 4%;
+}
+
+.title{
+  display: inline;
+  position: relative;
+}
+
 ion-menu.md ion-list {
   padding: 20px 0;
 }
