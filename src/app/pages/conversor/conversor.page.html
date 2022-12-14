@@ -18,20 +18,19 @@
   </div>
   <p id="tipo_conversor">De dolar a peso chileno:</p>
   <div class="input-group">
-    <input name="USD" id="USD1" type="number" required class="form-control" placeholder="USD" onchange=sumar()>
+    <input name="USD" id="USD1" type="number" required class="form-control" placeholder="USD" [(ngModel)]="value">
     <span class="input-group-addon">-></span>
-    <input name="CLP" id="CLP1" type="text" required class="form-control" placeholder="CLP" disabled onchange=sumar()>
+    <input name="CLP" id="CLP1" type="text" required class="form-control" placeholder="CLP" value="{{pesoAdolar}}" disabled>
   </div>
-  <button id="convertir">Convertir</button>
   <br>
-  <br>
-  <p id="tipo_conversor">De peso chileno a dolar:</p>
+  <p id="tipo_conversor">De euro a peso chileno:</p>
   <div class="input-group">
-    <input name="USD" id="remitosucursal" type="number" required class="form-control" placeholder="CLP">
+    <input name="USD" id="remitosucursal" type="number" required class="form-control" placeholder="EUR" [(ngModel)]="value">
     <span class="input-group-addon">-></span>
-    <input name="CLP" id="remitonumero" type="text" required class="form-control" placeholder="USD" disabled>
+    <input name="CLP" id="remitonumero" type="text" required class="form-control" placeholder="CLP" value="{{pesoAeuro}}" disabled>
   </div>
-  <button id="convertir">Convertir</button>
+  <br>
+  <button id="convertir" (click)="calcular()">Convertir</button>
   <br>
   <br>
   <br>

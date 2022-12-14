@@ -12,7 +12,10 @@ export class AppComponent {
   public appPages = [
     { title: 'Bienvenida', url:'/home',icon:'home'},
     { title: 'Socios', url:'/about',icon:'People'},
+    { title: 'Mis viajes', url:'/mis-viajes', icon:'car'},
+    { title: 'Viajes', url:'/viajes', icon:'navigate'},
     { title: 'Conversor', url: '/conversor', icon: 'cash' },
+    { title: 'Perfil', url: '/perfil', icon: 'person' },
     { title: 'Sobre Nosotros', url:'/sobre-nosotros',icon:'happy'},
     { title: 'Unete', url:'/registrarse',icon:'CAR'},
     { title: 'Log-out', url:'/login', icon: 'log-out'},
