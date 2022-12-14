@@ -1,19 +1,3 @@
-export interface conductor{
-    id?:string;
-    name: string;
-    apellido_paterno: string;
-    apellido_materno: string;
-    rut: string;
-    edad: number;
-    direccion: string;
-    username: string;
-    telefono: number;
-    genero: string;
-    correo: string;
-    password: string;
-    fotoperfil: string;
-    perfil:'conductor'|'pasajero',
-}
 export interface pasajero{
     id:string;
     name: string;
@@ -26,7 +10,7 @@ export interface pasajero{
     telefono: number;
     genero: string;
     correo: string;
-    password: string;
+    contra: string;
     fotoperfil: string;
     perfil:string,
 }

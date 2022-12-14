@@ -23,6 +23,7 @@ export class FirestoreService {
     const usuariosRef = collection(this.firestore,'pasajeros');
     return addDoc(usuariosRef,usuario);
   }
+
   
   updateUsuario(usuario:pasajero) {
     const usuarioRef = doc(this.firestore, `pasajeros/${usuario.id}`);

@@ -24,7 +24,7 @@ export class ModalPage implements OnInit {
     telefono: null,
     genero: null,
     correo: null,
-    password: null,
+    contra: null,
     fotoperfil: null,
     perfil:null,
 
