@@ -8,16 +8,9 @@ import { AngularFireAuth } from '@angular/fire/compat/auth';
 })
 export class AuthService{
 
-    constructor(private auth:Auth,private authfirebase:AngularFireAuth){}
+    constructor(private auth:Auth){}
 
-    async register(datos:conductor){
-        try{
-           return this.authfirebase.createUserWithEmailAndPassword(datos.correo,datos.password);
-            
-        } catch (error){
-            return null;
-        }
-    }
+
 
     async login(email:string,password:string){
         try {

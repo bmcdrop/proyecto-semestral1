@@ -35,7 +35,7 @@ export class RegistrarsePage implements OnInit {
     }
     async addPasajeros(){
       const alert = await this.alertCtrl.create({
-        header:'Add User',
+        header:'Agregar un usuario',
         inputs:[
 
           {

@@ -12,11 +12,13 @@ export class LoginPage implements OnInit {
 
   credentials!:FormGroup;
 
-  constructor(private loadingCtrl: LoadingController,
+  constructor(
+    private loadingCtrl: LoadingController,
     private formBuilder:FormBuilder,
     private alertCtrl: AlertController,
     private authService: AuthService,
-    private router: Router,) { }
+    private router: Router
+    ) { }
 
   
   ngOnInit() {
@@ -42,8 +44,6 @@ export class LoginPage implements OnInit {
     })
   }
 
-
-
   async showLoading() {
     const loading = await this.loadingCtrl.create({
       message: 'Cargando TeLlevoApp...',
@@ -53,20 +53,6 @@ export class LoginPage implements OnInit {
     loading.present();
   }
 
- // async register(){
- //   const loading = await this.loadingCtrl.create();
-    
-//    const user = await this.authService.register(this.credentials.value.email,this.credentials.value.password)
- //   await loading.dismiss();
-
- // }
-
-  if(user){
-    this.router.navigateByUrl('/home');
-  }
-  else(){
-    this.alertPresent('Registro fallido','revise bien los datos ingresados e intentelo nuevamente');
-  }
 
 async login(){
   const loading = await this.loadingCtrl.create();
