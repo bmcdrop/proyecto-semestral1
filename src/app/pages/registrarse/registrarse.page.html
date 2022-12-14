@@ -1,0 +1,27 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Blank
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-list>
+    <ion-item *ngFor="let pasajeros of usuario" (click)="openDetailUsuario(pasajeros)">
+      <ion-avatar slot="start">
+        <img [src]="usuario.fotoperfil" alt="{{usuario.name}}">
+      </ion-avatar>
+      <ion-label>
+        <h2>{{pasajeros.name}} {{pasajeros.apellido_paterno}}</h2>
+      </ion-label>
+    </ion-item>
+  </ion-list>
+
+  <ion-fab vertical="bottom" horizontal="end">
+    <ion-fab-button color="success" (click)="addPasajeros()">
+      <ion-icon name="add"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+</ion-content>
+

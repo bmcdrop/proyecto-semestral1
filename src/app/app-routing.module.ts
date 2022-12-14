@@ -57,7 +57,16 @@ const routes: Routes = [
     redirectTo: 'sobre-nosotros',
     pathMatch: 'full'
   },
-
+  {
+    path: 'registrarse',
+    redirectTo: 'registrarse',
+    pathMatch: 'full'
+  },
+  {
+    path: 'modal',
+    redirectTo: 'modal',
+    pathMatch: 'full'
+  },
   {
     path: '**',
     redirectTo: 'e404',
@@ -80,6 +89,7 @@ const routes: Routes = [
     path: 'detalle-ingeniero',
     loadChildren: () => import('./pages/detalle-ingeniero/detalle-ingeniero.module').then( m => m.DetalleIngenieroPageModule)
   },
+  
   {
     path: 'login',
     loadChildren: () => import('./pages/login/login.module').then( m => m.LoginPageModule)
@@ -109,14 +119,13 @@ const routes: Routes = [
     path: 'perfil',
     loadChildren: () => import('./pages/perfil/perfil.module').then( m => m.PerfilPageModule)
   },
-
-
-
-
-
-
-
-
+    path: 'registrarse',
+    loadChildren: () => import('./pages/registrarse/registrarse.module').then( m => m.RegistrarsePageModule)
+  },
+  {
+    path: 'modal',
+    loadChildren: () => import('./pages/modal/modal.module').then( m => m.ModalPageModule)
+  },
 
 ];
 

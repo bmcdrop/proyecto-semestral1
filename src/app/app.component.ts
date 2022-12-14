@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { WheaterApiComponent } from './components/wheater-api/wheater-api.component';
+import { AuthService } from './services/auth.service';
 @Component({
   selector: 'app-root',
   templateUrl: 'app.component.html',
@@ -16,6 +17,7 @@ export class AppComponent {
     { title: 'Conversor', url: '/conversor', icon: 'cash' },
     { title: 'Perfil', url: '/perfil', icon: 'person' },
     { title: 'Sobre Nosotros', url:'/sobre-nosotros',icon:'happy'},
+    { title: 'Unete', url:'/registrarse',icon:'CAR'},
     { title: 'Log-out', url:'/login', icon: 'log-out'},
 
   ];

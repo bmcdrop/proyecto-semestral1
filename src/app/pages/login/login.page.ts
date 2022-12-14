@@ -53,13 +53,13 @@ export class LoginPage implements OnInit {
     loading.present();
   }
 
-  async register(){
-    const loading = await this.loadingCtrl.create();
+ // async register(){
+ //   const loading = await this.loadingCtrl.create();
     
-    const user = await this.authService.register(this.credentials.value.email,this.credentials.value.password)
-    await loading.dismiss();
+//    const user = await this.authService.register(this.credentials.value.email,this.credentials.value.password)
+ //   await loading.dismiss();
 
-  }
+ // }
 
   if(user){
     this.router.navigateByUrl('/home');
