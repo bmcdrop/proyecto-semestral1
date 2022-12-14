@@ -1,6 +1,6 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>modal</ion-title>
+    <ion-title>{{usuario.name}} {{usuario.apellido_paterno}}</ion-title>
   </ion-toolbar>
 </ion-header>
 
@@ -38,16 +38,12 @@
       <ion-label position="floating">Direccion</ion-label>
       <ion-input type="text" [(ngModel)]="usuario.direccion" required></ion-input>
     </ion-item>
-    <ion-item>
-      <ion-label position="floating">Foto de perfil</ion-label>
-      <ion-input type="url" [(ngModel)]="usuario.fotoperfil" required></ion-input>
-    </ion-item>
   
 
   <ion-button expand="block" color="success" (click)="updateUsuario()">
     <ion-icon name="save" slot="start">UPDATE</ion-icon>
   </ion-button>
-  <ion-button expand="block" color="danger" (click)="deleteUsuario()">
+  <ion-button expand="block" color="danger" (click)="deletePasajero()">
     <ion-icon name="trash" slot="start">DELETE</ion-icon>
   </ion-button>
 </ion-content>
