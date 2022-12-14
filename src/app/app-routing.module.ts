@@ -33,6 +33,25 @@ const routes: Routes = [
     redirectTo: 'conversor',
     pathMatch: 'full'
   },
+
+  {
+    path: 'mis-viajes',
+    redirectTo: 'mis-viajes',
+    pathMatch: 'full'
+  },
+
+  {
+    path: 'viajes',
+    redirectTo: 'viajes',
+    pathMatch: 'full'
+  },
+
+  {
+    path: 'perfil',
+    redirectTo: 'perfil',
+    pathMatch: 'full'
+  },
+
   {
     path: 'sobre-nosotros',
     redirectTo: 'sobre-nosotros',
@@ -78,6 +97,21 @@ const routes: Routes = [
     path: 'sobre-nosotros',
     loadChildren: () => import('./pages/sobre-nosotros/sobre-nosotros.module').then( m => m.SobreNosotrosPageModule)
   },
+  {
+    path: 'mis-viajes',
+    loadChildren: () => import('./pages/mis-viajes/mis-viajes.module').then( m => m.MisViajesPageModule)
+  },
+  {
+    path: 'viajes',
+    loadChildren: () => import('./pages/viajes/viajes.module').then( m => m.ViajesPageModule)
+  },
+  {
+    path: 'perfil',
+    loadChildren: () => import('./pages/perfil/perfil.module').then( m => m.PerfilPageModule)
+  },
+
+
+
 
 
 
