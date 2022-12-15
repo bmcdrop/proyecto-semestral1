@@ -85,6 +85,7 @@ export class RegistrarsePage implements OnInit {
           },
           {
             name:"correo",
+            ngModel="datos.correo",
             type:"text",
             placeholder:"ejemplo@correo.com"
           },
