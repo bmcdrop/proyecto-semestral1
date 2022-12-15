@@ -4,22 +4,31 @@
       <ion-menu-button></ion-menu-button>
     </ion-buttons>
 
-    <ion-title>Perfil</ion-title>
+    <ion-title>Completa tu Perfil</ion-title>
 
   </ion-toolbar>
 </ion-header>
 <ion-content>
-  <div>
-    <ion-avatar id="Avatar">
-      <img alt="Silhouette of a person's head" src="https://ionicframework.com/docs/img/demos/avatar.svg" />
+  <div class="avatar">
+    <ion-avatar (click)="uploadAvatar()">
+      <img *ngIf="profile?.imageUrl; else placeholder_avatar;" [src]="profile.imageUrl" />
+      <ng-template #placeholder_avatar>
+        <div class="no-avatar">
+          <p>Pincha para <br>Modificar</p>
+        </div>
+      </ng-template>
     </ion-avatar>
-    <p id="Nombre">nombre</p>
-    <p id="Usuario">@*Usuario*</p>
-    <p id="Edad">*Edad* Años</p>
-    <p id="Rut">*Rut*</p>
-    <p id="Numero">+56 *Celular*</p>
-    <p id="Direccion">*direccion*</p>
-    <p id="Texto-extra">Informacion privada solo la puedes ver tu</p>
   </div>
-  <ion-button id="btoEditar" expand="full" type="button" fill="clear" (click)="openDetailUsuario()">Editar perfil</ion-button>
+
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <ion-button fill="clear" expand="full" (click)="addPasajero()">Actualizar Perfil</ion-button>
 </ion-content>

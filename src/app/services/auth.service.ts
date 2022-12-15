@@ -1,6 +1,8 @@
 import { Injectable} from "@angular/core";
 import { Auth, createUserWithEmailAndPassword,signInWithEmailAndPassword, signOut,onAuthStateChanged} from '@angular/fire/auth';
 import { AlertController } from "@ionic/angular";
+import { BehaviorSubject, Observable } from "rxjs";
+
 
 
 
@@ -8,15 +10,20 @@ import { AlertController } from "@ionic/angular";
     providedIn:'root'
 })
 export class AuthService{
+    private loggedIn = new BehaviorSubject<boolean>(false);
     loginn:boolean=false;
     constructor(private auth:Auth,private alertController:AlertController){}
 
+    get isLogged(): Observable<boolean> {
+        return this.loggedIn.asObservable();
+    }
 
 
     async login(email:string,password:string){
         try {
             const user= await signInWithEmailAndPassword(this.auth,email,password);
             return user;
+            this.loggedIn.next(true);
         } catch (error){
             return null;
         }
@@ -33,6 +40,7 @@ export class AuthService{
     }
 
 
+
     stateUser(){
        onAuthStateChanged(this.auth,(data)=>{
         if(data){
@@ -47,7 +55,11 @@ export class AuthService{
 
 
 
+
+
+
     logout(){
         return signOut(this.auth);
+        this.loggedIn.next(false);
     }
 }
