@@ -9,6 +9,14 @@ import { AuthService } from './services/auth.service';
 
 })
 export class AppComponent {
+
+  
+
+
+  constructor(private authentication:AuthService){
+
+    this.authentication.stateUser();
+  }
   public appPages = [
     { title: 'Bienvenida', url:'/home',icon:'home'},
     { title: 'Socios', url:'/about',icon:'People'},
@@ -17,7 +25,7 @@ export class AppComponent {
     { title: 'Conversor', url: '/conversor', icon: 'cash' },
     { title: 'Perfil', url: '/perfil', icon: 'person' },
     { title: 'Sobre Nosotros', url:'/sobre-nosotros',icon:'happy'},
-    { title: 'Unete', url:'/registrarse',icon:'CAR'},
+    { title: 'Unete', url:'/registrarse',icon:'settings'},
     { title: 'Log-out', url:'/login', icon: 'log-out'},
 
   ];

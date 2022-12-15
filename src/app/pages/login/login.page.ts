@@ -1,22 +1,32 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
-import { AlertController, LoadingController,IonButton } from '@ionic/angular';
+import { AlertController, LoadingController,IonButton, ToastController, ModalController } from '@ionic/angular';
+import { stringify } from 'querystring';
 import { AuthService} from 'src/app/services/auth.service';
+import { FirestoreService } from 'src/app/services/firestore.service';
+import { UserService } from 'src/app/services/user.service';
+import { ModalRegisterPage } from '../modal-register/modal-register.page';
 @Component({
   selector: 'app-login',
   templateUrl: './login.page.html',
   styleUrls: ['./login.page.scss'],
 })
 export class LoginPage implements OnInit {
-
   credentials!:FormGroup;
 
-  constructor(private loadingCtrl: LoadingController,
+  constructor(
+    private loadingCtrl: LoadingController,
     private formBuilder:FormBuilder,
     private alertCtrl: AlertController,
     private authService: AuthService,
-    private router: Router,) { }
+    private database:FirestoreService,
+    private router: Router,
+    private toastCtrl:ToastController,
+    private usuario:UserService,
+    private fire:FirestoreService,
+    private modalCtrl:ModalController
+    ) { }
 
   
   ngOnInit() {
@@ -26,13 +36,28 @@ export class LoginPage implements OnInit {
 
   }
 
+
+
+
+
   get email(){
-    return this.credentials?.get('email');
+    return this.credentials?.get('correo');
   }
 
   get password(){
     return this.credentials?.get('password')
   }
+  async openRegisterUser(){
+    const modal = await this.modalCtrl.create({
+      component:ModalRegisterPage,
+      breakpoints:[0,0.5,0.8,1],
+      initialBreakpoint:1
+    });
+    modal.present();
+  }
+
+
+
 
   createForm(){
     this.credentials = this.formBuilder.group({
@@ -41,8 +66,6 @@ export class LoginPage implements OnInit {
 
     })
   }
-
-
 
   async showLoading() {
     const loading = await this.loadingCtrl.create({
@@ -53,20 +76,8 @@ export class LoginPage implements OnInit {
     loading.present();
   }
 
- // async register(){
- //   const loading = await this.loadingCtrl.create();
-    
-//    const user = await this.authService.register(this.credentials.value.email,this.credentials.value.password)
- //   await loading.dismiss();
+  
 
- // }
-
-  if(user){
-    this.router.navigateByUrl('/home');
-  }
-  else(){
-    this.alertPresent('Registro fallido','revise bien los datos ingresados e intentelo nuevamente');
-  }
 
 async login(){
   const loading = await this.loadingCtrl.create();
@@ -89,6 +100,16 @@ async login(){
     buttons:['OK']
   });
   alert.present();
+}
+async toasPresent(message:string){
+  const toast = await this.toastCtrl.create({
+    message:message,
+    duration:1000,
+  });
+  toast.present();
+}
+logout(){
+  this.authService.logout();
 }
 
 }

@@ -1,23 +1,17 @@
 import { Injectable} from "@angular/core";
-import { Auth, createUserWithEmailAndPassword,signInWithEmailAndPassword, signOut} from '@angular/fire/auth';
-import { conductor } from "../models/models";
-import { AngularFireAuth } from '@angular/fire/compat/auth';
+import { Auth, createUserWithEmailAndPassword,signInWithEmailAndPassword, signOut,onAuthStateChanged} from '@angular/fire/auth';
+import { AlertController } from "@ionic/angular";
+
+
 
 @Injectable({
     providedIn:'root'
 })
 export class AuthService{
+    loginn:boolean=false;
+    constructor(private auth:Auth,private alertController:AlertController){}
 
-    constructor(private auth:Auth,private authfirebase:AngularFireAuth){}
 
-    async register(datos:conductor){
-        try{
-           return this.authfirebase.createUserWithEmailAndPassword(datos.correo,datos.password);
-            
-        } catch (error){
-            return null;
-        }
-    }
 
     async login(email:string,password:string){
         try {
@@ -28,6 +22,29 @@ export class AuthService{
         }
 
     }
+
+   async registrarUser(email:string,password:string){
+        try{
+            const user = await createUserWithEmailAndPassword(this.auth,email,password);
+            return user;
+        }catch(error){
+            return null;
+        }
+    }
+
+
+    stateUser(){
+       onAuthStateChanged(this.auth,(data)=>{
+        if(data){
+            console.log('logueado',data.uid,data.email)
+            this.loginn = true;
+        }else{
+            console.log('no esta logueado')
+            this.loginn = false;
+        }
+       })
+    }
+
 
 
     logout(){
