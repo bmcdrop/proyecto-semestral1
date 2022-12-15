@@ -3,18 +3,18 @@
     <ion-buttons slot="start">
       <ion-menu-button></ion-menu-button>
     </ion-buttons>
-    <ion-title>Viajes</ion-title>
+    <ion-title id="Title">Viajes</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
   <ion-content [fullscreen]="true">
-    <ion-list>
+    <ion-list id="fondo">
       <ion-item *ngFor="let viaje of Viaje" (click)="openDetailViaje(viaje)">
 
         <ion-label>
           <h2>{{viaje.desde}} -> {{viaje.hasta}}</h2>
-          <h1>capacidad: {{viaje.capacidad}} de {{viaje.espacio}}</h1>
+          <h1>Capacidad: {{viaje.capacidad}} de {{viaje.espacio}}</h1>
         </ion-label>
       </ion-item>
     </ion-list>

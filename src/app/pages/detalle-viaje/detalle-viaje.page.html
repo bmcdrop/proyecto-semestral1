@@ -1,17 +1,26 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>Patente: {{Viaje.patente}}</ion-title>
+    <ion-title id="Title">Viaje: {{Viaje.patente}}</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
-  <h3>Valor: {{Viaje.valor}}</h3>
-  <h3>Desde: {{Viaje.desde}}</h3>
-  <h3>Hasta: {{Viaje.hasta}}</h3>
-  <h3>Conductor: {{Viaje.conductor}}</h3>
-  <h3>Patente: {{Viaje.patente}}</h3>
-  <h3>Capacidad: {{Viaje.capacidad}} de: {{Viaje.espacio}}</h3>
-  <p>Recuerda especificar la hora de salida y desde donde asi a tus compañeros le facilitas la llegada a tu vehiculo ademas de que agiliza tu salida.</p>
-  <h3>Descripcion: {{Viaje.descripcion}}</h3>
-  <ion-button expand="full" fill="clear"  type="button">Solicitar unirse</ion-button>
+  <div id="informacion">
+    <p id="label">Valor:</p>
+    <p id="A1">{{Viaje.valor}}</p>
+    <p id="label">Conductor: </p>
+    <p id="A1">{{Viaje.conductor}}</p>
+    <p id="label">Desde: </p>
+    <p id="A1">{{Viaje.desde}}</p>
+    <p id="label">Hasta: </p>
+    <p id="A1">{{Viaje.hasta}}</p>
+    <p id="label">Patente: </p>
+    <p id="A1">{{Viaje.patente}}</p>
+    <p id="label">Capacidad: </p>
+    <p id="A1">{{Viaje.capacidad}} de: {{Viaje.espacio}}</p>
+    <p id="label">Descripcion: </p>
+    <p id="A1">{{Viaje.descripcion}}</p>
+    <br><br><br>
+    <p id="A2">Recuerda especificar la hora de salida y desde donde asi a tus compañeros le facilitas la llegada a tu vehiculo ademas de que agiliza tu salida.</p>
+  </div>
 </ion-content>
