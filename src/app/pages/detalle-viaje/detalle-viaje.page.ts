@@ -18,7 +18,8 @@ export class DetalleViajePage implements OnInit {
     hasta:null,
     patente:null,
     valor:null,
-    espacio:null
+    espacio:null,
+    descripcion:null
 
   };
   constructor(private database:FirestoreService, private toastCtrl:ToastController, private alertCtrl:AlertController, private modalCtrl: ModalController) 

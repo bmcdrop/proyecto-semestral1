@@ -24,4 +24,5 @@ export interface viaje{
     patente:string;
     valor:number;
     espacio:number;
+    descripcion:string;
 }
