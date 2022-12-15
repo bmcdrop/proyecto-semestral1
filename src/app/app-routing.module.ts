@@ -155,9 +155,6 @@ const routes: Routes = [
     loadChildren: () => import('./pages/detalle-viaje/detalle-viaje.module').then( m => m.DetalleViajePageModule)
   },
 
-
-
-
 ];
 
 @NgModule({
