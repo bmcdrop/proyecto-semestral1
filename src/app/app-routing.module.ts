@@ -45,6 +45,16 @@ const routes: Routes = [
     redirectTo: 'viajes',
     pathMatch: 'full'
   },
+  {
+    path: 'crearViajes',
+    redirectTo: 'crearViajes',
+    pathMatch: 'full'
+  },
+  {
+    path: 'detalle-viaje',
+    redirectTo: 'detalle-viaje',
+    pathMatch: 'full'
+  },
 
   {
     path: 'perfil',
@@ -136,6 +146,16 @@ const routes: Routes = [
     path: 'modal-register',
     loadChildren: () => import('./pages/modal-register/modal-register.module').then( m => m.ModalRegisterPageModule)
   },
+  {
+    path: 'crear-viaje',
+    loadChildren: () => import('./pages/crear-viaje/crear-viaje.module').then( m => m.CrearViajePageModule)
+  },
+  {
+    path: 'detalle-viaje',
+    loadChildren: () => import('./pages/detalle-viaje/detalle-viaje.module').then( m => m.DetalleViajePageModule)
+  },
+
+
 
 
 ];

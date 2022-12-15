@@ -15,13 +15,13 @@ export interface pasajero{
     perfil:string,
 }
 
-export interface CambioDinero{
-    PesoaDolar:{
-        numero1:number;
-        numero2:number;
-    },
-    DolaraPeso:{
-        numero1:number;
-        numero2:number;
-    }
+export interface viaje{
+    id:string;
+    capacidad:number;
+    conductor:string;
+    desde:string;
+    hasta:string;
+    patente:string;
+    valor:number;
+    espacio:number;
 }
