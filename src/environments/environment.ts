@@ -5,13 +5,13 @@
 export const environment = {
   production: false,
   firebase:{
-    apiKey: "AIzaSyAdZco5_qJU_IR0LbMZZ8uc6BX_nrZR984",
-    authDomain: "tellevoapp3.firebaseapp.com",
-    projectId: "tellevoapp3",
-    storageBucket: "tellevoapp3.appspot.com",
-    messagingSenderId: "429156961177",
-    appId: "1:429156961177:web:ed26dfed7aff323e63e108",
-    measurementId: "G-FTRK86SLPT"
+    apiKey: "AIzaSyB-dDKO-ir4B7u02fvnBjvBbZCZm3-0p-w",
+    authDomain: "tellevoapp-dcb54.firebaseapp.com",
+    projectId: "tellevoapp-dcb54",
+    storageBucket: "tellevoapp-dcb54.appspot.com",
+    messagingSenderId: "269354739507",
+    appId: "1:269354739507:web:7b1da5e56500390576c046",
+    measurementId: "G-C6ZL8Q9VT7"
   }
 };
 

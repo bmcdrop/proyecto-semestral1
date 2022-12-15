@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+
 import { WheaterApiComponent } from 'src/app/components/wheater-api/wheater-api.component';
+
 
 @Component({
   selector: 'app-home',
@@ -9,8 +11,8 @@ import { WheaterApiComponent } from 'src/app/components/wheater-api/wheater-api.
 })
 export class HomePage implements OnInit {
 
-  constructor() { }
-
+  constructor() {
+  }
   ngOnInit() {
   }
 

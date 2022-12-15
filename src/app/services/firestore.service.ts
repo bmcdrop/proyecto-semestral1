@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { Firestore,collection,collectionData,doc,docData,addDoc,updateDoc,deleteDoc } from '@angular/fire/firestore';
 import { Observable } from 'rxjs';
 import {AngularFirestore} from '@angular/fire/compat/firestore';
-import { pasajero } from '../models/models';
+import { pasajero, viaje } from '../models/models';
 
 @Injectable({
   providedIn: 'root'
@@ -23,6 +23,7 @@ export class FirestoreService {
     const usuariosRef = collection(this.firestore,'pasajeros');
     return addDoc(usuariosRef,usuario);
   }
+
   
   updateUsuario(usuario:pasajero) {
     const usuarioRef = doc(this.firestore, `pasajeros/${usuario.id}`);
@@ -46,6 +47,40 @@ export class FirestoreService {
     return deleteDoc(usuarioRef);
   }
 
+//------------------------------------------ usuarios --------------------------------------
+
+getViaje():Observable<viaje[]>{
+  const viajeRef = collection(this.firestore,'viajes');
+  return collectionData(viajeRef, {idField:'id'}) as Observable<viaje[]>;
+}
+getViajeById(id:string):Observable<viaje>{
+  const viajeRef = doc(this.firestore,`viajes/${id}`);
+  return docData(viajeRef, {idField:'id'}) as Observable<viaje>;
+}
+addViaje(Viaje:viaje) {
+  const viajeRef = collection(this.firestore,'viaje');
+  return addDoc(viajeRef,Viaje);
+}
+
+
+updateViaje(Viaje:viaje) {
+  const viajeRef = doc(this.firestore, `viaje/${Viaje.id}`);
+  return updateDoc(viajeRef, 
+    {
+     capacidad:Viaje.capacidad,
+     conductor:Viaje.conductor,
+     desde:Viaje.desde,
+     hasta:Viaje.hasta,
+     patente:Viaje.patente,
+     valor:Viaje.valor
+    }
+  );
+}
+
+deleteViaje(Viaje:viaje){
+  const viajeRef = doc(this.firestore, `viajes/${Viaje.id}`);
+  return deleteDoc(viajeRef);
+}
 
 
 }
