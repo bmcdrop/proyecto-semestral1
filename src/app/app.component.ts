@@ -25,7 +25,6 @@ export class AppComponent {
     { title: 'Conversor', url: '/conversor', icon: 'cash' },
     { title: 'Perfil', url: '/perfil', icon: 'person' },
     { title: 'Sobre Nosotros', url:'/sobre-nosotros',icon:'happy'},
-    { title: 'Unete', url:'/registrarse',icon:'settings'},
     { title: 'Log-out', url:'/login', icon: 'log-out'},
 
   ];
