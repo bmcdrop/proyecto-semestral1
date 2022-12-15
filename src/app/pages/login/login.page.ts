@@ -58,7 +58,6 @@ export class LoginPage implements OnInit {
 
 
 
-
   createForm(){
     this.credentials = this.formBuilder.group({
       email:['',[Validators.required,Validators.email]],
@@ -75,7 +74,19 @@ export class LoginPage implements OnInit {
 
     loading.present();
   }
+  async register(){
+    const loading = await this.loadingCtrl.create();
+    await loading.present();
+    const user = await this.authService.registrarUser(this.credentials.value.email,this.credentials.value.password);
+    await loading.dismiss();
 
+    if(user){
+      this.router.navigateByUrl('/home');
+    }
+    else{
+      this.alertPresent('Registro fallido','Revise bien los datos ingresado e inténtelo nuevamente más rato...');
+    }
+  }
   
 
 

@@ -47,7 +47,7 @@ export class FirestoreService {
     return deleteDoc(usuarioRef);
   }
 
-//------------------------------------------ usuarios --------------------------------------
+//------------------------------------------ viajes --------------------------------------
 
 getViaje():Observable<viaje[]>{
   const viajeRef = collection(this.firestore,'viajes');
@@ -58,13 +58,13 @@ getViajeById(id:string):Observable<viaje>{
   return docData(viajeRef, {idField:'id'}) as Observable<viaje>;
 }
 addViaje(Viaje:viaje) {
-  const viajeRef = collection(this.firestore,'viaje');
+  const viajeRef = collection(this.firestore,'viajes');
   return addDoc(viajeRef,Viaje);
 }
 
 
 updateViaje(Viaje:viaje) {
-  const viajeRef = doc(this.firestore, `viaje/${Viaje.id}`);
+  const viajeRef = doc(this.firestore, `viajes/${Viaje.id}`);
   return updateDoc(viajeRef, 
     {
      capacidad:Viaje.capacidad,
@@ -72,7 +72,9 @@ updateViaje(Viaje:viaje) {
      desde:Viaje.desde,
      hasta:Viaje.hasta,
      patente:Viaje.patente,
-     valor:Viaje.valor
+     valor:Viaje.valor,
+     espacio:Viaje.espacio,
+     descripcion:Viaje.descripcion
     }
   );
 }

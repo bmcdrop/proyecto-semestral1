@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
+import { canActivate, redirectUnauthorizedTo } from '@angular/fire/auth-guard';
 
 
 const routes: Routes = [
@@ -26,7 +27,7 @@ const routes: Routes = [
   {
     path: 'detalle-ingeniero',
     redirectTo: 'detalle-ingeniero',
-    pathMatch: 'full'
+    pathMatch: 'full' 
   },
   {
     path: 'conversor',
@@ -78,9 +79,15 @@ const routes: Routes = [
     pathMatch: 'full'
   },
   {
+    path: 'modal-usuarios',
+    redirectTo: 'modal-usuarios',
+    pathMatch: 'full'
+  },
+  {
     path: 'modal-register',
     redirectTo: 'modal-register',
     pathMatch: 'full'
+   
   },
   {
     path: '**',
@@ -154,6 +161,11 @@ const routes: Routes = [
     path: 'detalle-viaje',
     loadChildren: () => import('./pages/detalle-viaje/detalle-viaje.module').then( m => m.DetalleViajePageModule)
   },
+  {
+    path: 'modal-usuarios',
+    loadChildren: () => import('./pages/modal-usuarios/modal-usuarios.module').then( m => m.ModalUsuariosPageModule)
+  },
+
 
 ];
 
